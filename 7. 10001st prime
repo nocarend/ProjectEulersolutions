@@ -1,0 +1,14 @@
+def is_prime(m):
+    prime = True
+    for a in range(2, int(m ** 0.5) + 1):
+        if m % a == 0:
+            prime = False
+    return prime
+
+
+p, n = [], 2
+while len(p) != 10001:
+    if is_prime(n) == True:
+        p.append(n)
+    n += 1
+print(p[10000])
